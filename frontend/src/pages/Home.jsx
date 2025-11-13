@@ -1,1 +1,0 @@
-export default function Home(){return (<div>CBX2 Base System Loaded</div>);}
