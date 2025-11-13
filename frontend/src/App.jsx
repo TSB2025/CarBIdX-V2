@@ -1,1 +1,13 @@
-export default function App(){return <h1>CarBidX V2</h1>}
+// App wrapper with router
+import React from 'react';
+import Router from './router.jsx';
+
+function App() {
+  return (
+    <>
+      <Router />
+    </>
+  );
+}
+
+export default App;

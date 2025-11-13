@@ -1,7 +1,8 @@
 {
-  "name": "carbidx-v2-frontend",
+  "name": "carbidx-v2",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -10,12 +11,10 @@
   "dependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^6.28.0",
-    "axios": "^1.7.7"
+    "react-router-dom": "^6.23.0"
   },
   "devDependencies": {
-    "@vitejs/plugin-react": "^4.3.0",
+    "@vitejs/plugin-react": "^4.2.1",
     "vite": "^5.4.0"
   }
 }
-
