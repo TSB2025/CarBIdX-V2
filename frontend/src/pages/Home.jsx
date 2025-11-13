@@ -8,7 +8,7 @@ export default function Home() {
       <NavBar />
       <Header />
       <div style={{textAlign:"center"}}>
-        <a href="/buyer"><button>Start a Buyer Request</button></a>
+        <a href="/buyer"><button>Start Buyer Request</button></a>
       </div>
     </>
   );

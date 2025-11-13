@@ -9,8 +9,8 @@ export default function DealerLogin() {
   const [msg,setMsg]=useState("");
 
   const login = async()=> {
-    const r = await API.post("/auth/login", {email, password:pass});
-    setMsg("Login attempt complete.");
+    const r = await API.post("/auth/login",{email,password:pass});
+    setMsg("Login complete.");
   };
 
   return (
@@ -19,7 +19,7 @@ export default function DealerLogin() {
       <div style={{padding:"32px"}}>
         <h2>Dealer Login</h2>
         <input placeholder="Email" onChange={e=>setEmail(e.target.value)} /><br/>
-        <input placeholder="Password" type="password" onChange={e=>setPass(e.target.value)} /><br/>
+        <input type="password" placeholder="Password" onChange={e=>setPass(e.target.value)} /><br/>
         <button onClick={login}>Login</button>
         <p>{msg}</p>
       </div>
