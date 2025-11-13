@@ -1,1 +1,0 @@
-export default function NavBar(){return(<nav>CBX2</nav>)}

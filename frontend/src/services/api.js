@@ -1,1 +1,0 @@
-export const API={base:'https://cbx2-backend.onrender.com/api/v1'};

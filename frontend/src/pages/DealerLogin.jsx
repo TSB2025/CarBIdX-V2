@@ -1,1 +1,0 @@
-export default function DealerLogin(){return(<div>Dealer Login</div>)}
