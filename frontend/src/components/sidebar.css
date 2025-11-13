@@ -1,0 +1,45 @@
+@import "../styles/theme.css";
+
+.sidebar {
+  width: 235px;
+  background: var(--cbx-blue);
+  color: var(--cbx-text-light);
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--cbx-shadow);
+}
+
+.sidebar-title {
+  font-size: 22px;
+  margin-bottom: 28px;
+  font-weight: 700;
+  padding-left: 10px;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-item a,
+.active-menu-item a {
+  color: var(--cbx-text-light);
+  text-decoration: none;
+  display: block;
+  padding: 12px 16px;
+  border-radius: var(--cbx-radius-sm);
+  transition: background 0.15s ease;
+  font-size: 15px;
+}
+
+.menu-item a:hover {
+  background: var(--cbx-blue-light);
+}
+
+.active-menu-item {
+  background: var(--cbx-blue-light);
+  font-weight: 600;
+}
+
