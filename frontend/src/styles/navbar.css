@@ -1,0 +1,12 @@
+/* Navbar */
+.navbar {
+  width: 100%;
+  background-color: var(--primary-blue);
+  padding: 16px;
+  color: white;
+}
+
+.navbar-brand {
+  font-size: 22px;
+  font-weight: bold;
+}
