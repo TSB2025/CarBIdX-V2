@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logo from "/logo.webp";
+import logo from "/logo.png";  // using your new high-quality image
 
 function Navbar() {
   return (
@@ -11,9 +11,9 @@ function Navbar() {
           <img
             src={logo}
             alt="CarBidX Logo"
-            className="h-12 w-auto object-contain select-none"
+            className="h-14 w-auto object-contain select-none"
           />
-          <span className="text-2xl font-semibold tracking-wide text-[#EABE3F]">
+          <span className="text-2xl font-semibold tracking-wide text-[#EABE3F] leading-none">
             CarBidX
           </span>
         </Link>
