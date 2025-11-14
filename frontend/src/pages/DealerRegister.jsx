@@ -1,1 +1,1 @@
-export default function DealerRegister(){return <h1>DealerRegister</h1>}
+import React from 'react'; export default function DealerRegister(){return(<div>DealerRegister</div>);}

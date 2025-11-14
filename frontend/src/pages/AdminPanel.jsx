@@ -1,1 +1,1 @@
-export default function AdminPanel(){return <h1>AdminPanel</h1>}
+import React from 'react'; export default function AdminPanel(){return(<div>AdminPanel</div>);}

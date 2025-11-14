@@ -1,1 +1,1 @@
-export default function BuyerVerify(){return <h1>BuyerVerify</h1>}
+import React from 'react'; export default function BuyerVerify(){return(<div>BuyerVerify</div>);}

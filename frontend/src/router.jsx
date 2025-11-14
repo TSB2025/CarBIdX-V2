@@ -1,12 +1,1 @@
-import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-
-export default function Router() {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<div>Home Page Placeholder</div>} />
-      </Routes>
-    </BrowserRouter>
-  );
-}
+import React from 'react'; import { BrowserRouter, Routes, Route } from 'react-router-dom'; import Home from './pages/Home.jsx'; export default function Router(){return(<BrowserRouter><Routes><Route path='/' element={<Home/>}/></Routes></BrowserRouter>);}

@@ -1,1 +1,1 @@
-export default function BuyerConfirm(){return <h1>BuyerConfirm</h1>}
+import React from 'react'; export default function BuyerConfirm(){return(<div>BuyerConfirm</div>);}

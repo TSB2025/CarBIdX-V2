@@ -1,1 +1,1 @@
-export default function AuctionLive(){return <h1>AuctionLive</h1>}
+import React from 'react'; export default function AuctionLive(){return(<div>AuctionLive</div>);}

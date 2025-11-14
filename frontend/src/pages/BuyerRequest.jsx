@@ -1,1 +1,1 @@
-export default function BuyerRequest(){return <h1>BuyerRequest</h1>}
+import React from 'react'; export default function BuyerRequest(){return(<div>BuyerRequest</div>);}
