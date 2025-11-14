@@ -1,0 +1,1 @@
+export default function BuyerConfirm(){ return <div>Buyer Confirm</div>; }

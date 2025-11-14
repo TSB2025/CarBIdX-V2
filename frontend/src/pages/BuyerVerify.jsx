@@ -1,0 +1,1 @@
+export default function BuyerVerify(){ return <div>Buyer Verify</div>; }
