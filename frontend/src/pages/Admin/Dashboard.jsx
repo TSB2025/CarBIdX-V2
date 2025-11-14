@@ -2,7 +2,7 @@ import React from "react";
 import BasicTable from "../../components/tables/BasicTable";
 
 const AdminDashboard = () => {
-  // Placeholder data wired to live API later
+  // Temporary placeholder metrics until backend is wired
   const metrics = [
     { label: "Active buyer accounts", value: 0 },
     { label: "Active dealer accounts", value: 0 },
@@ -19,12 +19,12 @@ const AdminDashboard = () => {
       <header className="page-header">
         <div>
           <h1>Admin dashboard</h1>
-          <p>High-level view of activity across the CarBidX platform.</p>
+          <p>High-level overview of all activity across CarBidX.</p>
         </div>
       </header>
 
       <section className="card">
-        <h2>Key metrics</h2>
+        <h2>Platform metrics</h2>
         <BasicTable columns={metricColumns} data={metrics} />
       </section>
     </main>
