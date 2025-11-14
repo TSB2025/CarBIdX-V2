@@ -18,22 +18,24 @@ const Login = () => {
   };
 
   return (
-    <main className="page auth-page">
-      <section className="auth-card">
-        <h1>Sign in to CarBidX</h1>
-        <p className="auth-subtitle">
-          Secure access for buyers, dealers, and admins.
+    <main className="min-h-screen w-full bg-[#0a0f24] flex items-center justify-center px-4 py-10">
+      <section className="w-full max-w-md bg-[#11172f] border border-[#1a2240] rounded-xl shadow-xl p-8 text-white">
+
+        <h1 className="text-3xl font-bold mb-2 text-center">Welcome Back</h1>
+        <p className="text-gray-300 text-center mb-8">
+          Sign in to your CarBidX account.
         </p>
 
-        <form onSubmit={handleSubmit} className="auth-form">
+        <form onSubmit={handleSubmit} className="flex flex-col gap-6">
           <Input
-            label="Email"
+            label="Email Address"
             name="email"
             type="email"
             value={form.email}
             onChange={handleChange}
             required
           />
+
           <Input
             label="Password"
             name="password"
@@ -43,15 +45,33 @@ const Login = () => {
             required
           />
 
-          {error && <p className="auth-error">{error}</p>}
+          {error && (
+            <p className="text-red-400 text-sm text-center -mt-3">{error}</p>
+          )}
 
-          <Button type="submit" disabled={loading}>
-            {loading ? "Signing in..." : "Sign in"}
+          <Button
+            type="submit"
+            disabled={loading}
+            className="w-full bg-[#E8C225] hover:bg-[#C9A71E] text-black font-semibold py-3 rounded-lg transition"
+          >
+            {loading ? "Signing in..." : "Sign In"}
           </Button>
         </form>
+
+        <p className="text-center text-gray-400 text-sm mt-6">
+          Don't have an account?{" "}
+          <a
+            href="/register"
+            className="text-[#E8C225] hover:text-[#C9A71E] font-medium"
+          >
+            Sign Up
+          </a>
+        </p>
+
       </section>
     </main>
   );
 };
 
 export default Login;
+
