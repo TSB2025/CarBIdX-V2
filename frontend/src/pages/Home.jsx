@@ -5,7 +5,7 @@ function Home() {
     <div className="flex flex-col items-center text-center px-6 pt-24 pb-10">
 
       {/* Hero Section */}
-      <h1 className="text-4xl md:text-6xl font-bold mb-6">
+      <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
         AI-Assisted Reverse Car Auctions
       </h1>
 
@@ -17,14 +17,14 @@ function Home() {
 
         {/* Buyer Button */}
         <button
-          className="bg-[#FAD80D] hover:bg-[#DDBA0B] text-black font-semibold px-8 py-3 rounded-lg text-lg"
+          className="bg-[#E8C225] hover:bg-[#C9A71E] text-black font-semibold px-8 py-3 rounded-lg text-lg transition"
         >
           Register as Buyer
         </button>
 
         {/* Dealer Button */}
         <button
-          className="border border-[#FAD80D] text-[#FAD80D] hover:bg-[#FAD80D] hover:text-black font-semibold px-8 py-3 rounded-lg text-lg"
+          className="border border-[#E8C225] text-[#E8C225] hover:bg-[#E8C225] hover:text-black font-semibold px-8 py-3 rounded-lg text-lg transition"
         >
           Register as Dealer
         </button>
