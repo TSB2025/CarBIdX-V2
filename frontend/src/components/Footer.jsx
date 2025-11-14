@@ -1,1 +1,1 @@
-export default function Footer(){return <div>Footer</div>}
+export default function Footer(){return <footer>Footer</footer>;}

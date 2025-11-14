@@ -1,1 +1,1 @@
-export default function CountdownTimer(){return <div>CountdownTimer</div>}
+import {useState,useEffect} from 'react';export default function CountdownTimer({seconds}){const[s,setS]=useState(seconds);useEffect(()=>{if(s<=0)return;const t=setTimeout(()=>setS(s-1),1000);return()=>clearTimeout(t);},[s]);return <span>{s}</span>;}
