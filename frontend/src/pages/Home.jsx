@@ -14,13 +14,21 @@ function Home() {
       </p>
 
       <div className="flex gap-4 flex-col sm:flex-row mb-24">
-        <button className="bg-yellow-500 hover:bg-yellow-400 text-black font-semibold px-8 py-3 rounded-lg text-lg">
+
+        {/* Buyer Button */}
+        <button
+          className="bg-[#FAD80D] hover:bg-[#DDBA0B] text-black font-semibold px-8 py-3 rounded-lg text-lg"
+        >
           Register as Buyer
         </button>
 
-        <button className="border border-yellow-500 text-yellow-500 hover:bg-yellow-500 hover:text-black font-semibold px-8 py-3 rounded-lg text-lg">
+        {/* Dealer Button */}
+        <button
+          className="border border-[#FAD80D] text-[#FAD80D] hover:bg-[#FAD80D] hover:text-black font-semibold px-8 py-3 rounded-lg text-lg"
+        >
           Register as Dealer
         </button>
+
       </div>
 
       {/* Live Requests Grid */}
