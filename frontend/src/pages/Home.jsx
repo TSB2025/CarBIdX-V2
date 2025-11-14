@@ -1,6 +1,10 @@
+import RequestsGrid from "../components/RequestsGrid";
+
 function Home() {
   return (
-    <div className="flex flex-col items-center justify-center text-center px-6 pt-24 pb-32">
+    <div className="flex flex-col items-center text-center px-6 pt-24 pb-10">
+
+      {/* Hero Section */}
       <h1 className="text-4xl md:text-6xl font-bold mb-6">
         AI-Assisted Reverse Car Auctions
       </h1>
@@ -9,7 +13,7 @@ function Home() {
         Dealers compete. Buyers save. Secure. Verified. Refundable deposits.
       </p>
 
-      <div className="flex gap-4 flex-col sm:flex-row">
+      <div className="flex gap-4 flex-col sm:flex-row mb-24">
         <button className="bg-yellow-500 hover:bg-yellow-400 text-black font-semibold px-8 py-3 rounded-lg text-lg">
           Register as Buyer
         </button>
@@ -18,6 +22,9 @@ function Home() {
           Register as Dealer
         </button>
       </div>
+
+      {/* Live Requests Grid */}
+      <RequestsGrid />
     </div>
   );
 }
