@@ -11,28 +11,40 @@ const BuyerDashboard = () => {
     { key: "vehicle", label: "Vehicle" },
     { key: "status", label: "Status" },
     { key: "bestOffer", label: "Best offer" },
-    { key: "dealerCount", label: "Dealers bidding" },
+    { key: "dealerCount", label: "Dealers bidding" }
   ];
 
   return (
-    <main className="page dashboard-page">
+    <main className="page dashboard-page text-white">
       <header className="page-header">
         <div>
-          <h1>Buyer dashboard</h1>
-          <p>Track your active requests and live dealer bids.</p>
+          <h1 className="text-white">Buyer Dashboard</h1>
+          <p className="text-gray-300">Track your active requests and live dealer bids.</p>
         </div>
-        <Button variant="primary" to="/buyer/auctions">
+
+        <Button
+          variant="primary"
+          to="/buyer/auctions"
+          className="bg-[#D5B628] hover:bg-[#B69C20] text-black font-semibold"
+        >
           View all auctions
         </Button>
       </header>
 
-      <section className="card">
-        <div className="card-header">
-          <h2>Active requests</h2>
-          <Button size="sm" onClick={refreshAuctions} disabled={loading}>
+      <section className="card bg-[#0A0F24] border border-[#1a2240]">
+        <div className="card-header flex items-center justify-between">
+          <h2 className="text-white">Active Requests</h2>
+
+          <Button
+            size="sm"
+            onClick={refreshAuctions}
+            disabled={loading}
+            className="bg-[#D5B628] hover:bg-[#B69C20] text-black"
+          >
             Refresh
           </Button>
         </div>
+
         <BasicTable
           columns={columns}
           data={myAuctions}
