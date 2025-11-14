@@ -35,7 +35,7 @@ function Navbar() {
 
           <Link
             to="/login"
-            className="bg-[#D5B628] text-[#0a0f24] px-4 py-2 rounded-md font-semibold hover:bg-[#B69C20] transition"
+            className="bg-[#D5B628] hover:bg-[#B69C20] text-[#0a0f24] px-4 py-2 rounded-md font-semibold transition"
           >
             Sign In
           </Link>
