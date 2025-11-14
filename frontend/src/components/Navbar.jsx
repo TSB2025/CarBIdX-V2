@@ -4,41 +4,41 @@ import logo from "/logo.webp";
 function Navbar() {
   return (
     <nav className="w-full bg-[#0a0f24] border-b border-[#1a2240]">
-      <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         
         {/* Left: Logo + Brand */}
-        <Link to="/" className="flex items-center gap-3">
+        <Link to="/" className="flex items-center gap-4">
           <img
             src={logo}
             alt="CarBidX Logo"
-            className="w-10 h-10 object-contain"
+            className="h-12 w-auto object-contain select-none"
           />
-          <span className="text-xl font-semibold tracking-wide text-[#f5c518]">
+          <span className="text-2xl font-semibold tracking-wide text-[#EABE3F]">
             CarBidX
           </span>
         </Link>
 
         {/* Right: Navigation */}
-        <div className="flex items-center gap-8 text-sm font-medium">
-          <Link to="/how-it-works" className="hover:text-[#f5c518]">
+        <div className="flex items-center gap-10 text-sm font-medium text-white">
+          <Link to="/how-it-works" className="hover:text-[#EABE3F] transition">
             How It Works
           </Link>
 
-          <Link to="/buyers" className="hover:text-[#f5c518]">
+          <Link to="/buyers" className="hover:text-[#EABE3F] transition">
             Buyers
           </Link>
 
-          <Link to="/dealers" className="hover:text-[#f5c518]">
+          <Link to="/dealers" className="hover:text-[#EABE3F] transition">
             Dealers
           </Link>
 
-          <Link to="/contact" className="hover:text-[#f5c518]">
+          <Link to="/contact" className="hover:text-[#EABE3F] transition">
             Contact Us
           </Link>
 
           <Link
             to="/login"
-            className="bg-[#f5c518] text-[#0a0f24] px-4 py-2 rounded-md font-semibold hover:bg-[#d4a314]"
+            className="bg-[#EABE3F] text-[#0a0f24] px-5 py-2 rounded-md font-semibold hover:bg-[#cfa536] transition"
           >
             Sign In
           </Link>
