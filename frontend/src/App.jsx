@@ -1,17 +1,11 @@
 import { BrowserRouter } from "react-router-dom";
-import Router from "./router.jsx";
-import Navbar from "./components/Navbar.jsx";
-import Footer from "./components/Footer.jsx";
+import AppRouter from "./router";
 
 function App() {
   return (
     <BrowserRouter>
-      <div className="app-container">
-        <Navbar />
-        <main className="main-content">
-          <Router />
-        </main>
-        <Footer />
+      <div className="min-h-screen bg-[#0a0f24] text-white">
+        <AppRouter />
       </div>
     </BrowserRouter>
   );
