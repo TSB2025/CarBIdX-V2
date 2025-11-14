@@ -1,19 +1,13 @@
 import { BrowserRouter } from "react-router-dom";
-import AppRouter from "./router";
 import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+import AppRouter from "./router";
 
 function App() {
   return (
     <BrowserRouter>
-      <div className="min-h-screen bg-[#0a0f24] text-white flex flex-col">
+      <div className="min-h-screen bg-[#0a0f24] text-white">
         <Navbar />
-
-        <div className="flex-grow">
-          <AppRouter />
-        </div>
-
-        <Footer />
+        <AppRouter />
       </div>
     </BrowserRouter>
   );
