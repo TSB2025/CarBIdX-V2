@@ -1,1 +1,9 @@
-/* colors */
+:root {
+  --primary: #0074ff;
+  --secondary: #444444;
+  --light-bg: #f5f5f5;
+  --white: #ffffff;
+  --border: #cccccc;
+  --text-dark: #222222;
+  --text-light: #666666;
+}
