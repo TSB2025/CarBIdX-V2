@@ -1,0 +1,87 @@
+/* ---BEGIN CODE--- */
+
+.admin-mfa-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #0d1333;
+  padding: 20px;
+}
+
+.admin-mfa-box {
+  width: 380px;
+  background-color: #111a4b;
+  border: 1px solid #1e2a63;
+  padding: 30px;
+  border-radius: 8px;
+  color: white;
+}
+
+.admin-mfa-title {
+  font-size: 22px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #e8c225;
+}
+
+.admin-mfa-info {
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.admin-mfa-error {
+  color: #ff5757;
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.admin-mfa-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.admin-mfa-label {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.admin-mfa-input {
+  background-color: #0b143a;
+  border: 1px solid #2b3870;
+  padding: 12px;
+  border-radius: 6px;
+  color: white;
+  font-size: 16px;
+}
+
+.admin-mfa-input:focus {
+  border-color: #e8c225;
+  outline: none;
+}
+
+.admin-mfa-button {
+  background-color: #e8c225;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #0d1333;
+  cursor: pointer;
+}
+
+.admin-mfa-button:hover {
+  background-color: #cdaa1d;
+}
+
+.admin-mfa-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ---END CODE--- */
