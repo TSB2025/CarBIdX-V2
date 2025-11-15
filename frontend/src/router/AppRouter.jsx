@@ -1,5 +1,3 @@
-// PATH: frontend/src/router/AppRouter.jsx
-
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 
@@ -9,12 +7,11 @@ import DealerLayout from "../layouts/DealerLayout";
 import AdminLayout from "../layouts/AdminLayout";
 
 /* Public Pages */
-import Home from "../pages/home";
+import Home from "../pages/Home";
 
 /* Buyer Pages */
 import BuyerDashboard from "../pages/Buyer/buyerdashboard";
 import BuyerRequests from "../pages/Buyer/buyerrequests";
-import BuyerRequest from "../pages/Buyer/buyerrequest";
 import BuyerAuctions from "../pages/Buyer/buyerauctions";
 import BuyerAuctionDetail from "../pages/Buyer/buyerauctiondetail";
 import BuyerProfile from "../pages/Buyer/buyerprofile";
@@ -22,6 +19,9 @@ import BuyerLogin from "../pages/Buyer/buyerlogin";
 import BuyerRegister from "../pages/Buyer/buyerregister";
 import BuyerVerify from "../pages/Buyer/buyerverify";
 import BuyerConfirm from "../pages/Buyer/buyerconfirm";
+
+/* IMPORTANT FIX → use the real file (buyerrequests.jsx) */
+import BuyerRequest from "../pages/Buyer/buyerrequests";
 
 /* Dealer Pages */
 import DealerDashboard from "../pages/Dealer/dealerdashboard";
@@ -57,7 +57,10 @@ export default function AppRouter() {
       <Route element={<BuyerLayout />}>
         <Route path="/buyer/dashboard" element={<BuyerDashboard />} />
         <Route path="/buyer/requests" element={<BuyerRequests />} />
+
+        {/* FIXED → use buyerrequests.jsx */}
         <Route path="/buyer/request" element={<BuyerRequest />} />
+
         <Route path="/buyer/auctions" element={<BuyerAuctions />} />
         <Route path="/buyer/auction/:id" element={<BuyerAuctionDetail />} />
         <Route path="/buyer/profile" element={<BuyerProfile />} />
