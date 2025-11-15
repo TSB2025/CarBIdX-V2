@@ -1,38 +1,74 @@
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import useAuth from "../../hooks/useAuth";
+import "../../styles/auth.css";
 
-function BuyerLogin() {
+export default function BuyerLogin() {
+  const navigate = useNavigate();
+  const { loginBuyer } = useAuth();
+
+  const [form, setForm] = useState({
+    email: "",
+    password: "",
+  });
+
+  const [error, setError] = useState("");
+
+  const handleChange = (e) => {
+    setForm({
+      ...form,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setError("");
+
+    try {
+      const success = await loginBuyer(form.email, form.password);
+
+      if (success) {
+        navigate("/buyer/dashboard");
+      } else {
+        setError("Invalid login credentials.");
+      }
+    } catch (err) {
+      setError("Login failed. Please try again.");
+    }
+  };
+
   return (
-    <div className="min-h-screen bg-[#0a0f24] text-white flex items-center justify-center px-4">
-      <div className="w-full max-w-md bg-[#11172f] border border-[#1a2240] rounded-lg p-8">
+    <div className="auth-container">
+      <h2 className="auth-title">Buyer Login</h2>
 
-        <h1 className="text-2xl font-bold mb-6 text-center">Buyer Login</h1>
+      <form className="auth-form" onSubmit={handleSubmit}>
+        <input
+          type="email"
+          name="email"
+          placeholder="Enter your email"
+          value={form.email}
+          onChange={handleChange}
+          required
+          className="auth-input"
+        />
 
-        <div className="space-y-4">
-          <input
-            type="email"
-            placeholder="Email"
-            className="w-full px-3 py-2 rounded bg-[#1a2240] text-white border border-[#2a3358]"
-          />
-          <input
-            type="password"
-            placeholder="Password"
-            className="w-full px-3 py-2 rounded bg-[#1a2240] text-white border border-[#2a3358]"
-          />
+        <input
+          type="password"
+          name="password"
+          placeholder="Enter your password"
+          value={form.password}
+          onChange={handleChange}
+          required
+          className="auth-input"
+        />
 
-          <button className="w-full bg-[#E8C225] text-black py-2.5 rounded font-semibold hover:bg-[#d5b628]">
-            Login
-          </button>
-        </div>
+        {error && <p className="auth-error">{error}</p>}
 
-        <p className="text-gray-400 text-xs text-center mt-6">
-          Don't have an account?{" "}
-          <Link to="/buyer/register" className="text-[#E8C225]">
-            Register
-          </Link>
-        </p>
-      </div>
+        <button type="submit" className="auth-button">
+          Sign In
+        </button>
+      </form>
     </div>
   );
 }
-
-export default BuyerLogin;
