@@ -1,45 +1,46 @@
+---BEGIN CODE---
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 
 /* Layouts */
-import BuyerLayout from "../layouts/BuyerLayout";
-import DealerLayout from "../layouts/DealerLayout";
-import AdminLayout from "../layouts/AdminLayout";
+import BuyerLayout from "../layouts/BuyerLayout.jsx";
+import DealerLayout from "../layouts/DealerLayout.jsx";
+import AdminLayout from "../layouts/AdminLayout.jsx";
 
 /* Public Pages */
-import Home from "../pages/home";
+import Home from "../pages/home.jsx";
 
 /* Buyer Pages */
-import BuyerDashboard from "../pages/Buyer/buyerdashboard";
-import BuyerRequests from "../pages/Buyer/buyerrequests";
-import BuyerAuctions from "../pages/Buyer/buyerauctions";
-import BuyerAuctionDetail from "../pages/Buyer/buyerauctiondetail";
-import BuyerProfile from "../pages/Buyer/buyerprofile";
-import BuyerLogin from "../pages/Buyer/buyerlogin";
-import BuyerRegister from "../pages/Buyer/buyerregister";
-import BuyerVerify from "../pages/Buyer/buyerverify";
-import BuyerConfirm from "../pages/Buyer/buyerconfirm";
+import BuyerDashboard from "../pages/Buyer/buyerdashboard.jsx";
+import BuyerRequests from "../pages/Buyer/buyerrequests.jsx";
+import BuyerAuctions from "../pages/Buyer/buyerauctions.jsx";
+import BuyerAuctionDetail from "../pages/Buyer/buyerauctiondetail.jsx";
+import BuyerProfile from "../pages/Buyer/buyerprofile.jsx";
+import BuyerLogin from "../pages/Buyer/buyerlogin.jsx";
+import BuyerRegister from "../pages/Buyer/buyerregister.jsx";
+import BuyerVerify from "../pages/Buyer/buyerverify.jsx";
+import BuyerConfirm from "../pages/Buyer/buyerconfirm.jsx";
 
-/* IMPORTANT FIX → use the real file (buyerrequests.jsx) */
-import BuyerRequest from "../pages/Buyer/buyerrequests";
+/* Single Request Page */
+import BuyerRequest from "../pages/Buyer/buyerrequests.jsx";
 
 /* Dealer Pages */
-import DealerDashboard from "../pages/Dealer/dealerdashboard";
-import DealerRequests from "../pages/Dealer/dealerrequests";
-import DealerBids from "../pages/Dealer/dealerbids";
-import DealerResults from "../pages/Dealer/dealerresults";
-import DealerProfile from "../pages/Dealer/dealerprofile";
-import DealerLogin from "../pages/Dealer/dealerlogin";
-import DealerBid from "../pages/Dealer/dealerbid";
+import DealerDashboard from "../pages/Dealer/dealerdashboard.jsx";
+import DealerRequests from "../pages/Dealer/dealerrequests.jsx";
+import DealerBids from "../pages/Dealer/dealerbids.jsx";
+import DealerResults from "../pages/Dealer/dealerresults.jsx";
+import DealerProfile from "../pages/Dealer/dealerprofile.jsx";
+import DealerLogin from "../pages/Dealer/dealerlogin.jsx";
+import DealerBid from "../pages/Dealer/dealerbid.jsx";
 
 /* Admin Pages */
-import AdminDashboard from "../pages/Admin/admindashboard";
-import AdminLogin from "../pages/Admin/adminlogin";
-import AdminApproveDealers from "../pages/Admin/adminapprovedealers";
-import AdminSuspendDealers from "../pages/Admin/adminsuspenddealers";
-import AdminSuspendBuyers from "../pages/Admin/adminsuspendbuyers";
-import AdminMaintenance from "../pages/Admin/adminmaintenance";
-import AdminDepositSettings from "../pages/Admin/admindeposits";
+import AdminDashboard from "../pages/Admin/admindashboard.jsx";
+import AdminLogin from "../pages/Admin/adminlogin.jsx";
+import AdminApproveDealers from "../pages/Admin/adminapprovedealers.jsx";
+import AdminSuspendDealers from "../pages/Admin/adminsuspenddealers.jsx";
+import AdminSuspendBuyers from "../pages/Admin/adminsuspendbuyers.jsx";
+import AdminMaintenance from "../pages/Admin/adminmaintenance.jsx";
+import AdminDepositSettings from "../pages/Admin/admindeposits.jsx";
 
 export default function AppRouter() {
   return (
@@ -57,10 +58,7 @@ export default function AppRouter() {
       <Route element={<BuyerLayout />}>
         <Route path="/buyer/dashboard" element={<BuyerDashboard />} />
         <Route path="/buyer/requests" element={<BuyerRequests />} />
-
-        {/* FIXED → use buyerrequests.jsx */}
         <Route path="/buyer/request" element={<BuyerRequest />} />
-
         <Route path="/buyer/auctions" element={<BuyerAuctions />} />
         <Route path="/buyer/auction/:id" element={<BuyerAuctionDetail />} />
         <Route path="/buyer/profile" element={<BuyerProfile />} />
@@ -96,3 +94,4 @@ export default function AppRouter() {
     </Routes>
   );
 }
+---END CODE---
