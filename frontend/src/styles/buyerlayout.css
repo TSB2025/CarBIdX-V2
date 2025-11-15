@@ -1,39 +1,43 @@
 .buyer-layout {
   display: flex;
-  min-height: 100vh;
-  background-color: #0a144a;
-  color: white;
+  height: 100vh;
+  width: 100%;
+  background-color: #0d1333;
 }
 
 .buyer-sidebar {
-  width: 220px;
-  background-color: #091037;
+  width: 240px;
+  background-color: #111a4b;
+  color: #ffffff;
   padding: 20px;
 }
 
 .buyer-sidebar-title {
   font-size: 20px;
-  font-weight: 700;
+  font-weight: bold;
   margin-bottom: 20px;
 }
 
-.buyer-sidebar-nav {
+.buyer-nav {
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
 
 .buyer-nav-item {
-  color: #ffd84d;
-  font-weight: 600;
+  color: #e8c225;
   text-decoration: none;
+  font-size: 16px;
 }
 
 .buyer-nav-item:hover {
-  color: #e4c348;
+  color: #ffffff;
 }
 
 .buyer-main {
   flex: 1;
-  padding: 30px;
+  padding: 25px;
+  overflow-y: auto;
+  background-color: #0d1333;
+  color: white;
 }
