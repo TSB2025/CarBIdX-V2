@@ -6,8 +6,13 @@ import BuyerLayout from "../layouts/BuyerLayout";
 import DealerLayout from "../layouts/DealerLayout";
 import AdminLayout from "../layouts/AdminLayout";
 
-/* Public Pages */
-import home from "../pages/home.jsx";
+/* LOCAL HOME COMPONENT (removes path problems) */
+const Home = () => (
+  <div style={{ color: "white", padding: "40px" }}>
+    <h1>CarBidX</h1>
+    <p>Reverse auctions for car buyers and dealers.</p>
+  </div>
+);
 
 /* Buyer Pages */
 import BuyerDashboard from "../pages/Buyer/buyerdashboard";
@@ -19,8 +24,6 @@ import BuyerLogin from "../pages/Buyer/buyerlogin";
 import BuyerRegister from "../pages/Buyer/buyerregister";
 import BuyerVerify from "../pages/Buyer/buyerverify";
 import BuyerConfirm from "../pages/Buyer/buyerconfirm";
-
-/* Buyer Create Request – real filename */
 import BuyerRequest from "../pages/Buyer/buyerrequests";
 
 /* Dealer Pages */
@@ -45,7 +48,7 @@ export default function AppRouter() {
   return (
     <Routes>
 
-      {/* PUBLIC ROUTES */}
+      {/* PUBLIC */}
       <Route path="/" element={<Home />} />
 
       {/* BUYER AUTH */}
@@ -53,7 +56,7 @@ export default function AppRouter() {
       <Route path="/buyer/register" element={<BuyerRegister />} />
       <Route path="/buyer/verify" element={<BuyerVerify />} />
 
-      {/* BUYER PROTECTED ROUTES */}
+      {/* BUYER */}
       <Route element={<BuyerLayout />}>
         <Route path="/buyer/dashboard" element={<BuyerDashboard />} />
         <Route path="/buyer/requests" element={<BuyerRequests />} />
@@ -67,7 +70,7 @@ export default function AppRouter() {
       {/* DEALER AUTH */}
       <Route path="/dealer/login" element={<DealerLogin />} />
 
-      {/* DEALER PROTECTED ROUTES */}
+      {/* DEALER */}
       <Route element={<DealerLayout />}>
         <Route path="/dealer/dashboard" element={<DealerDashboard />} />
         <Route path="/dealer/requests" element={<DealerRequests />} />
@@ -80,7 +83,7 @@ export default function AppRouter() {
       {/* ADMIN AUTH */}
       <Route path="/securecmb" element={<AdminLogin />} />
 
-      {/* ADMIN PROTECTED ROUTES */}
+      {/* ADMIN */}
       <Route element={<AdminLayout />}>
         <Route path="/admin/dashboard" element={<AdminDashboard />} />
         <Route path="/admin/approve-dealers" element={<AdminApproveDealers />} />
