@@ -9,11 +9,12 @@ import DealerLayout from "../layouts/DealerLayout";
 import AdminLayout from "../layouts/AdminLayout";
 
 /* Public Pages */
-import Home from "../pages/Home";
+import Home from "../pages/home";
 
 /* Buyer Pages */
 import BuyerDashboard from "../pages/Buyer/buyerdashboard";
 import BuyerRequests from "../pages/Buyer/buyerrequests";
+import BuyerRequest from "../pages/Buyer/buyerrequest";
 import BuyerAuctions from "../pages/Buyer/buyerauctions";
 import BuyerAuctionDetail from "../pages/Buyer/buyerauctiondetail";
 import BuyerProfile from "../pages/Buyer/buyerprofile";
@@ -21,7 +22,6 @@ import BuyerLogin from "../pages/Buyer/buyerlogin";
 import BuyerRegister from "../pages/Buyer/buyerregister";
 import BuyerVerify from "../pages/Buyer/buyerverify";
 import BuyerConfirm from "../pages/Buyer/buyerconfirm";
-import BuyerRequest from "../pages/Buyer/buyerrequest";
 
 /* Dealer Pages */
 import DealerDashboard from "../pages/Dealer/dealerdashboard";
