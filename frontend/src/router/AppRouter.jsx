@@ -2,44 +2,44 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 
 /* Layouts */
-import BuyerLayout from "../layouts/BuyerLayout.jsx";
-import DealerLayout from "../layouts/DealerLayout.jsx";
-import AdminLayout from "../layouts/AdminLayout.jsx";
+import BuyerLayout from "../layouts/BuyerLayout";
+import DealerLayout from "../layouts/DealerLayout";
+import AdminLayout from "../layouts/AdminLayout";
 
 /* Public Pages */
-import Home from "../pages/Home.jsx";
+import Home from "../pages/home";
 
 /* Buyer Pages */
-import BuyerDashboard from "../pages/Buyer/BuyerDashboard.jsx";
-import BuyerRequests from "../pages/Buyer/BuyerRequests.jsx";
-import BuyerAuctions from "../pages/Buyer/BuyerAuctions.jsx";
-import BuyerAuctionDetail from "../pages/Buyer/BuyerAuctionDetail.jsx";
-import BuyerProfile from "../pages/Buyer/BuyerProfile.jsx";
-import BuyerLogin from "../pages/Buyer/BuyerLogin.jsx";
-import BuyerRegister from "../pages/Buyer/BuyerRegister.jsx";
-import BuyerVerify from "../pages/Buyer/BuyerVerify.jsx";
-import BuyerConfirm from "../pages/Buyer/BuyerConfirm.jsx";
+import BuyerDashboard from "../pages/Buyer/buyerdashboard";
+import BuyerRequests from "../pages/Buyer/buyerrequests";
+import BuyerAuctions from "../pages/Buyer/buyerauctions";
+import BuyerAuctionDetail from "../pages/Buyer/buyerauctiondetail";
+import BuyerProfile from "../pages/Buyer/buyerprofile";
+import BuyerLogin from "../pages/Buyer/buyerlogin";
+import BuyerRegister from "../pages/Buyer/buyerregister";
+import BuyerVerify from "../pages/Buyer/buyerverify";
+import BuyerConfirm from "../pages/Buyer/buyerconfirm";
 
-/* Single Request Page */
-import BuyerRequest from "../pages/Buyer/BuyerRequests.jsx";
+/* Buyer Create Request – real filename */
+import BuyerRequest from "../pages/Buyer/buyerrequests";
 
 /* Dealer Pages */
-import DealerDashboard from "../pages/Dealer/DealerDashboard.jsx";
-import DealerRequests from "../pages/Dealer/DealerRequests.jsx";
-import DealerBids from "../pages/Dealer/DealerBids.jsx";
-import DealerResults from "../pages/Dealer/DealerResults.jsx";
-import DealerProfile from "../pages/Dealer/DealerProfile.jsx";
-import DealerLogin from "../pages/Dealer/DealerLogin.jsx";
-import DealerBid from "../pages/Dealer/DealerBid.jsx";
+import DealerDashboard from "../pages/Dealer/dealerdashboard";
+import DealerRequests from "../pages/Dealer/dealerrequests";
+import DealerBids from "../pages/Dealer/dealerbids";
+import DealerResults from "../pages/Dealer/dealerresults";
+import DealerProfile from "../pages/Dealer/dealerprofile";
+import DealerLogin from "../pages/Dealer/dealerlogin";
+import DealerBid from "../pages/Dealer/dealerbid";
 
 /* Admin Pages */
-import AdminDashboard from "../pages/Admin/AdminDashboard.jsx";
-import AdminLogin from "../pages/Admin/AdminLogin.jsx";
-import AdminApproveDealers from "../pages/Admin/AdminApproveDealers.jsx";
-import AdminSuspendDealers from "../pages/Admin/AdminSuspendDealers.jsx";
-import AdminSuspendBuyers from "../pages/Admin/AdminSuspendBuyers.jsx";
-import AdminMaintenance from "../pages/Admin/AdminMaintenance.jsx";
-import AdminDepositSettings from "../pages/Admin/AdminDeposits.jsx";
+import AdminDashboard from "../pages/Admin/admindashboard";
+import AdminLogin from "../pages/Admin/adminlogin";
+import AdminApproveDealers from "../pages/Admin/adminapprovedealers";
+import AdminSuspendDealers from "../pages/Admin/adminsuspenddealers";
+import AdminSuspendBuyers from "../pages/Admin/adminsuspendbuyers";
+import AdminMaintenance from "../pages/Admin/adminmaintenance";
+import AdminDepositSettings from "../pages/Admin/admindeposits";
 
 export default function AppRouter() {
   return (
