@@ -29,7 +29,7 @@ import BuyerRequest from "../pages/buyer/buyerrequests";
 /* dealer pages */
 import DealerDashboard from "../pages/dealer/dealerdashboard";
 import DealerRequests from "../pages/dealer/dealerrequests";
-import DealerBids from "../pages/dealer/dealerbids";
+import DealerBids from "../pages/dealer/dealerbid";
 import DealerResults from "../pages/dealer/dealerresults";
 import DealerProfile from "../pages/dealer/dealerprofile";
 import DealerLogin from "../pages/dealer/dealerlogin";
