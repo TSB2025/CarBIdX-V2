@@ -1,74 +1,76 @@
+// ---BEGIN CODE---
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
-import "../../styles/auth.css";
 
 export default function BuyerLogin() {
   const navigate = useNavigate();
-  const { loginBuyer } = useAuth();
+  const { saveBuyerToken } = useAuth();
 
-  const [form, setForm] = useState({
-    email: "",
-    password: "",
-  });
-
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
 
-  const handleChange = (e) => {
-    setForm({
-      ...form,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  const handleSubmit = async (e) => {
+  async function handleSubmit(e) {
     e.preventDefault();
     setError("");
+    setLoading(true);
 
     try {
-      const success = await loginBuyer(form.email, form.password);
+      const res = await fetch("https://your-backend-url.com/buyer/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, password })
+      });
 
-      if (success) {
-        navigate("/buyer/dashboard");
-      } else {
-        setError("Invalid login credentials.");
+      if (!res.ok) {
+        setLoading(false);
+        setError("Invalid credentials.");
+        return;
       }
+
+      const data = await res.json();
+      saveBuyerToken(data.token);
+
+      navigate("/buyer/dashboard");
+
     } catch (err) {
-      setError("Login failed. Please try again.");
+      setError("Network error, try again.");
+      setLoading(false);
     }
-  };
+  }
 
   return (
     <div className="auth-container">
       <h2 className="auth-title">Buyer Login</h2>
 
-      <form className="auth-form" onSubmit={handleSubmit}>
+      {error && <p className="auth-error">{error}</p>}
+
+      <form onSubmit={handleSubmit} className="auth-form">
         <input
           type="email"
-          name="email"
-          placeholder="Enter your email"
-          value={form.email}
-          onChange={handleChange}
-          required
+          placeholder="Enter email"
           className="auth-input"
+          value={email}
+          onChange={e => setEmail(e.target.value)}
+          required
         />
 
         <input
           type="password"
-          name="password"
-          placeholder="Enter your password"
-          value={form.password}
-          onChange={handleChange}
-          required
+          placeholder="Enter password"
           className="auth-input"
+          value={password}
+          onChange={e => setPassword(e.target.value)}
+          required
         />
 
-        {error && <p className="auth-error">{error}</p>}
-
-        <button type="submit" className="auth-button">
-          Sign In
+        <button className="auth-button" disabled={loading}>
+          {loading ? "Signing in…" : "Sign In"}
         </button>
       </form>
     </div>
   );
 }
+// ---END CODE---
