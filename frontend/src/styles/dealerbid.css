@@ -1,0 +1,105 @@
+/* PATH: frontend/src/styles/dealerbid.css */
+
+.dealerbid-container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #0a0f24;
+  padding: 40px;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.dealerbid-content {
+  width: 100%;
+  max-width: 650px;
+}
+
+.dealerbid-title {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.dealerbid-subtitle {
+  margin-top: 6px;
+  margin-bottom: 30px;
+  opacity: 0.85;
+}
+
+.dealerbid-sectiontitle {
+  font-size: 20px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.dealerbid-requestbox {
+  background-color: #11172f;
+  border: 1px solid #1a2240;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.dealerbid-nodata {
+  opacity: 0.9;
+}
+
+.dealerbid-details {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.dealerbid-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dealerbid-label {
+  opacity: 0.75;
+}
+
+.dealerbid-value {
+  font-weight: 600;
+}
+
+.dealerbid-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.dealerbid-form input,
+.dealerbid-form textarea {
+  width: 100%;
+  padding: 12px;
+  background-color: #11172f;
+  border: 1px solid #1a2240;
+  border-radius: 8px;
+  color: white;
+}
+
+.dealerbid-submit {
+  background-color: #e8c225;
+  padding: 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  color: black;
+}
+
+.dealerbid-submit:hover {
+  background-color: #c9a620;
+}
+
+.dealerbid-cancel {
+  background-color: #991b1b;
+  padding: 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  color: white;
+  margin-top: 10px;
+}
+
+.dealerbid-cancel:hover {
+  background-color: #7f1616;
+}
