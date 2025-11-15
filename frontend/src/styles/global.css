@@ -2,10 +2,63 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Temporary reset to ensure layout loads */
-body {
+/* GLOBAL RESET */
+html, body, #root {
   margin: 0;
-  background-color: #0a0f24;
+  padding: 0;
+  height: 100%;
+  min-height: 100%;
+  background-color: #0a0f24; /* CBX-V2 navy */
   color: white;
-  font-family: sans-serif;
+  font-family: Inter, sans-serif;
+}
+
+/* REMOVE ALL WHITE DEFAULTS */
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0f24;
+}
+::-webkit-scrollbar-thumb {
+  background: #1a2240;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2a3358;
+}
+
+/* INPUTS + FORMS */
+input, select, textarea {
+  background-color: #11172f;
+  color: white;
+  border: 1px solid #1a2240;
+  outline: none;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #8a8f9f;
+}
+
+/* BUTTON NORMALIZATION */
+button {
+  cursor: pointer;
+}
+
+/* REMOVE EMERGENT ARTIFACTS */
+div[data-emergent-wrapper],
+[data-emergent],
+.emergent-container,
+.emergent-wrapper {
+  display: none !important;
+  visibility: hidden !important;
 }
