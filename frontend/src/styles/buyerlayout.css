@@ -1,0 +1,39 @@
+.buyer-layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: #0a144a;
+  color: white;
+}
+
+.buyer-sidebar {
+  width: 220px;
+  background-color: #091037;
+  padding: 20px;
+}
+
+.buyer-sidebar-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.buyer-sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.buyer-nav-item {
+  color: #ffd84d;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.buyer-nav-item:hover {
+  color: #e4c348;
+}
+
+.buyer-main {
+  flex: 1;
+  padding: 30px;
+}
