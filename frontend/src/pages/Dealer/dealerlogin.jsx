@@ -1,74 +1,78 @@
-/* BEGIN: DealerLogin.jsx */
+// ---BEGIN CODE---
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import useAuth from "../../hooks/useAuth";
 
 export default function DealerLogin() {
   const navigate = useNavigate();
+  const { saveDealerToken } = useAuth();
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
-  async function handleLogin(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
     setError("");
+    setLoading(true);
 
     try {
-      const response = await fetch("/dealer/login", {
+      const res = await fetch("https://your-backend-url.com/dealer/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, password }),
+        body: JSON.stringify({ email, password })
       });
 
-      const data = await response.json();
-
-      if (!response.ok) {
-        setError(data.message || "Login failed");
+      if (!res.ok) {
+        setLoading(false);
+        setError("Invalid credentials.");
         return;
       }
 
-      localStorage.setItem("dealerToken", data.token);
+      const data = await res.json();
+      saveDealerToken(data.token);
 
       navigate("/dealer/dashboard");
+
     } catch (err) {
-      setError("Network error. Try again.");
+      setError("Network error, try again.");
+      setLoading(false);
     }
   }
 
   return (
-    <div className="auth-container">
-      <h1 className="auth-title">Dealer Login</h1>
+    <div className="dealer-login-container">
+      <div className="dealer-login-box">
+        <h2 className="dealer-login-title">Dealer Login</h2>
 
-      {error && <p className="auth-error">{error}</p>}
+        {error && <p className="dealer-login-error">{error}</p>}
 
-      <form className="auth-form" onSubmit={handleLogin}>
-        <label>Email</label>
-        <input
-          type="email"
-          placeholder="Enter your dealer email"
-          value={email}
-          onChange={e => setEmail(e.target.value)}
-          required
-        />
+        <form onSubmit={handleSubmit} className="dealer-login-form">
+          <input
+            type="email"
+            placeholder="Enter email"
+            className="dealer-login-input"
+            value={email}
+            onChange={e => setEmail(e.target.value)}
+            required
+          />
 
-        <label>Password</label>
-        <input
-          type="password"
-          placeholder="Enter your password"
-          value={password}
-          onChange={e => setPassword(e.target.value)}
-          required
-        />
+          <input
+            type="password"
+            placeholder="Enter password"
+            className="dealer-login-input"
+            value={password}
+            onChange={e => setPassword(e.target.value)}
+            required
+          />
 
-        <button type="submit" className="auth-btn">
-          Sign In
-        </button>
-      </form>
-
-      <p className="auth-footer">
-        Need an account?  
-        <a href="/dealer/register">Sign Up</a>
-      </p>
+          <button className="dealer-login-button" disabled={loading}>
+            {loading ? "Signing in…" : "Sign In"}
+          </button>
+        </form>
+      </div>
     </div>
   );
 }
-/* END: DealerLogin.jsx */
+// ---END CODE---
