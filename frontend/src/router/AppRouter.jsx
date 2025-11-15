@@ -7,7 +7,7 @@ import DealerLayout from "../layouts/DealerLayout";
 import AdminLayout from "../layouts/AdminLayout";
 
 /* Public Pages */
-import home from "../frontend/src/pages/home";
+import home from "../pages/home";
 
 /* Buyer Pages */
 import BuyerDashboard from "../pages/Buyer/buyerdashboard";
