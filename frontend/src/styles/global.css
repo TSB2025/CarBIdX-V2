@@ -2,63 +2,60 @@
 @tailwind components;
 @tailwind utilities;
 
-/* GLOBAL RESET */
-html, body, #root {
+/* Root theme */
+:root {
+  --cbx-bg: #0a0f24;
+  --cbx-text: #ffffff;
+}
+
+/* Global reset */
+html, body {
   margin: 0;
   padding: 0;
-  height: 100%;
+  background-color: var(--cbx-bg);
+  color: var(--cbx-text);
   min-height: 100%;
-  background-color: #0a0f24; /* CBX-V2 navy */
-  color: white;
+  height: 100%;
+  width: 100%;
   font-family: Inter, sans-serif;
 }
 
-/* REMOVE ALL WHITE DEFAULTS */
-* {
-  box-sizing: border-box;
+/* Make all pages inherit full height */
+#root {
+  height: 100%;
+  min-height: 100vh;
+  background-color: var(--cbx-bg);
+  color: var(--cbx-text);
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+/* Remove white boxes from forms, cards, containers */
+input,
+select,
+textarea {
+  background-color: #11182d;
+  color: #ffffff;
+  border: 1px solid #2a3350;
 }
 
-/* SCROLLBAR */
-::-webkit-scrollbar {
-  width: 8px;
-}
-::-webkit-scrollbar-track {
-  background: #0a0f24;
-}
-::-webkit-scrollbar-thumb {
-  background: #1a2240;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #2a3358;
+input::placeholder,
+textarea::placeholder {
+  color: #a0a8c3;
 }
 
-/* INPUTS + FORMS */
-input, select, textarea {
-  background-color: #11172f;
-  color: white;
-  border: 1px solid #1a2240;
-  outline: none;
-}
-
-input::placeholder, textarea::placeholder {
-  color: #8a8f9f;
-}
-
-/* BUTTON NORMALIZATION */
 button {
   cursor: pointer;
 }
 
-/* REMOVE EMERGENT ARTIFACTS */
-div[data-emergent-wrapper],
-[data-emergent],
-.emergent-container,
-.emergent-wrapper {
-  display: none !important;
-  visibility: hidden !important;
+/* Panels */
+.card,
+.container,
+.box,
+.section {
+  background-color: #11182d;
+  color: #ffffff;
+}
+
+/* Remove accidental white backgrounds on imported components */
+* {
+  background: transparent;
 }
