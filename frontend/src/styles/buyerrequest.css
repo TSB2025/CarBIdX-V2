@@ -1,0 +1,77 @@
+/* PATH: frontend/src/styles/buyerrequest.css */
+
+.buyerrequest-container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #0a0f24;
+  color: white;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.buyerrequest-content {
+  width: 100%;
+  max-width: 600px;
+}
+
+.buyerrequest-title {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.buyerrequest-subtitle {
+  margin-top: 6px;
+  margin-bottom: 30px;
+  opacity: 0.85;
+}
+
+.buyerrequest-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.buyerrequest-form label {
+  font-size: 15px;
+  opacity: 0.85;
+}
+
+.buyerrequest-form input,
+.buyerrequest-form select,
+.buyerrequest-form textarea {
+  width: 100%;
+  padding: 12px;
+  background-color: #11172f;
+  border: 1px solid #1a2240;
+  border-radius: 8px;
+  color: white;
+}
+
+.buyerrequest-submit {
+  background-color: #e8c225;
+  padding: 14px;
+  width: 100%;
+  border-radius: 8px;
+  font-weight: 600;
+  color: black;
+  margin-top: 10px;
+}
+
+.buyerrequest-submit:hover {
+  background-color: #c9a620;
+}
+
+.buyerrequest-cancel {
+  background-color: #991b1b;
+  padding: 14px;
+  width: 100%;
+  border-radius: 8px;
+  font-weight: 600;
+  color: white;
+  margin-top: 10px;
+}
+
+.buyerrequest-cancel:hover {
+  background-color: #7f1616;
+}
