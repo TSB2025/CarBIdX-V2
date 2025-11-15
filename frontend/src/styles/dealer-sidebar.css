@@ -1,0 +1,29 @@
+.dealer-sidebar {
+  width: 220px;
+  background-color: #070e2e;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.dealer-sidebar-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #ffd84d;
+}
+
+.dealer-sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.dealer-nav-item {
+  color: #ffd84d;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.dealer-nav-item:hover {
+  color: #e4c348;
+}
