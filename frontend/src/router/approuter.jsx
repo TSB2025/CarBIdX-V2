@@ -9,8 +9,8 @@ import AdminLayout from "../layouts/adminlayout";
 /* local home component */
 const Home = () => (
   <div style={{ color: "white", padding: "40px" }}>
-    <h1>CarBidX</h1>
-    <p>Reverse auctions for car buyers and dealers.</p>
+    <h1>carbidx</h1>
+    <p>reverse auctions for car buyers and dealers.</p>
   </div>
 );
 
@@ -48,15 +48,15 @@ export default function AppRouter() {
   return (
     <Routes>
 
-      {/* PUBLIC */}
+      {/* public */}
       <Route path="/" element={<Home />} />
 
-      {/* BUYER AUTH */}
+      {/* buyer auth */}
       <Route path="/buyer/login" element={<BuyerLogin />} />
       <Route path="/buyer/register" element={<BuyerRegister />} />
       <Route path="/buyer/verify" element={<BuyerVerify />} />
 
-      {/* BUYER */}
+      {/* buyer */}
       <Route element={<BuyerLayout />}>
         <Route path="/buyer/dashboard" element={<BuyerDashboard />} />
         <Route path="/buyer/requests" element={<BuyerRequests />} />
@@ -67,10 +67,10 @@ export default function AppRouter() {
         <Route path="/buyer/confirm" element={<BuyerConfirm />} />
       </Route>
 
-      {/* DEALER AUTH */}
+      {/* dealer auth */}
       <Route path="/dealer/login" element={<DealerLogin />} />
 
-      {/* DEALER */}
+      {/* dealer */}
       <Route element={<DealerLayout />}>
         <Route path="/dealer/dashboard" element={<DealerDashboard />} />
         <Route path="/dealer/requests" element={<DealerRequests />} />
@@ -80,10 +80,10 @@ export default function AppRouter() {
         <Route path="/dealer/bid/:id" element={<DealerBid />} />
       </Route>
 
-      {/* ADMIN AUTH */}
+      {/* admin auth */}
       <Route path="/securecmb" element={<AdminLogin />} />
 
-      {/* ADMIN */}
+      {/* admin */}
       <Route element={<AdminLayout />}>
         <Route path="/admin/dashboard" element={<AdminDashboard />} />
         <Route path="/admin/approve-dealers" element={<AdminApproveDealers />} />
