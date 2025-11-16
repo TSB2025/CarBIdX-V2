@@ -1,6 +1,6 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import DealerSidebar from "../components/sidebar/DealerSidebar";
+import DealerSidebar from "../components/sidebar/dealersidebar";
 import "../styles/dealerlayout.css";
 
 export default function DealerLayout() {
