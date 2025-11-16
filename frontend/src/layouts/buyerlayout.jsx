@@ -1,6 +1,6 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import BuyerSidebar from "../components/sidebar/BuyerSidebar";
+import BuyerSidebar from "../components/sidebar/buyersidebar";
 import "../styles/buyerlayout.css";
 
 export default function BuyerLayout() {
